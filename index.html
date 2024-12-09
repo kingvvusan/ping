@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그리드 레이아웃</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grid-container">
+      <div class="grid-item" onclick="changeImageTemporary(this, 'https://i.imgur.com/ZUKbwos.png', 'https://i.imgur.com/vOaXwJr.gif')">
+
+      <img src="https://i.imgur.com/ZUKbwos.png" alt="이미지1" />
+
+      <button class="button">버튼1</button>
+
+    </div>
+
+    <!-- 두 번째 아이템 -->
+
+    <div class="grid-item" onclick="changeImageTemporary(this, 'https://i.imgur.com/8h796bj.png', 'https://i.imgur.com/Crw8csv.gif')">
+
+      <img src="https://i.imgur.com/8h796bj.png" alt="이미지2" />
+
+      <button class="button">버튼2</button>
+
+    </div>
+
+    <!-- 세 번째 아이템 -->
+
+    <div class="grid-item" onclick="changeImageTemporary(this, 'https://i.imgur.com/2BRkkWm.png', 'https://i.imgur.com/19bomlv.gif')">
+
+      <img src="https://i.imgur.com/2BRkkWm.png" alt="이미지3" />
+
+      <button class="button">버튼3</button>
+
+    </div>
+
+    <!-- 네 번째 아이템 -->
+
+    <div class="grid-item" onclick="changeImageTemporary(this, 'https://i.imgur.com/37VG1E5.png', 'https://i.imgur.com/aNXVnuD.gif')">
+
+      <img src="https://i.imgur.com/37VG1E5.png" alt="이미지4" />
+
+      <button class="button">버튼4</button>
+
+    </div>
+
+    <!-- 다섯 번째 아이템 -->
+
+    <div class="grid-item" onclick="changeImageTemporary(this, 'https://i.imgur.com/IEgFhnV.png', 'https://i.imgur.com/BYnEHm6.gif')">
+
+      <img src="https://i.imgur.com/IEgFhnV.png" alt="이미지5" />
+
+      <button class="button">버튼5</button>
+
+    </div>
+
+    <!-- 여섯 번째 아이템 -->
+
+    <div class="grid-item" onclick="changeImageTemporary(this, 'https://i.imgur.com/9fmeFa3.png', 'https://i.imgur.com/r12OEAl.gif')">
+
+      <img src="https://i.imgur.com/9fmeFa3.png" alt="이미지6" />
+
+      <button class="button">버튼6</button>
+
+    </div>
+
+    
+    <!-- 투명도 적용 (7번) -->
+    <div class="grid-item transparent">
+      <img src="https://via.placeholder.com/80" alt="이미지7" />
+      <button class="button">버튼7</button>
+    </div>
+
+    <!-- 투명도 적용 (8번) -->
+    <div class="grid-item transparent">
+      <img src="https://via.placeholder.com/80" alt="이미지8" />
+      <button class="button">버튼8</button>
+    </div>
+
+    <!-- 투명도 해제 (9번) -->
+    <div class="grid-item" onclick="changeImageTemporary(this, 'https://i.imgur.com/RcoJeP6.png', 'https://i.imgur.com/R9zNvpt.gif')">
+      <img src="https://i.imgur.com/RcoJeP6.png" alt="이미지9" />
+      <button class="button">입금신청</button>
+    </div>
+    
+    <!-- 모달을 위한 HTML -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- 기존 코드 -->
+<div class="grid-item" onclick="openModal('keyboard.html')">
+  <img src="https://i.imgur.com/RcoJeP6.png" alt="이미지9" />
+  <button class="button">입금신청</button>
+</div>
+<!-- 투명도 해제 (10번) -->
+<div class="grid-item" onclick="changeImageTemporary(this, 'https://i.imgur.com/TNRsxnm.png', 'https://i.imgur.com/usTh5ps.gif')">
+  <img src="https://i.imgur.com/TNRsxnm.png" alt="이미지10" />
+  <button class="button">출금신청</button>
+</div>
+
+    <!-- 투명도 적용 (11번) -->
+    <div class="grid-item transparent">
+      <img src="https://via.placeholder.com/80" alt="이미지11" />
+      <button class="button">버튼11</button>
+    </div>
+
+    <!-- 투명도 적용 (12번) -->
+    <div class="grid-item transparent">
+      <img src="https://via.placeholder.com/80" alt="이미지12" />
+      <button class="button">버튼12</button>
+    </div>
+
+    <!-- 투명도 적용 (13번) -->
+    <div class="grid-item transparent">
+      <img src="https://via.placeholder.com/80" alt="이미지13" />
+      <button class="button">버튼13</button>
+    </div>
+
+    <!-- 투명도 적용 (14번) -->
+    <div class="grid-item transparent">
+      <img src="https://via.placeholder.com/80" alt="이미지14" />
+      <button class="button">버튼14</button>
+    </div>
+
+    <!-- 투명도 적용 (15번) -->
+    <div class="grid-item transparent">
+      <img src="https://via.placeholder.com/80" alt="이미지15" />
+      <button class="button">버튼15</button>
+    </div>
+
+    <!-- 투명도 적용 (16번) -->
+    <div class="grid-item transparent">
+      <img src="https://via.placeholder.com/80" alt="이미지16" />
+      <button class="button">버튼16</button>
+    </div>
+  </div>
+
+<script>
+  /**
+   * 클릭 시 이미지를 GIF로 변경 후 2초 후 다시 원래 이미지로 되돌림
+   * @param {HTMLElement} element - 클릭된 그리드 항목
+   * @param {string} staticImage - 정적인 이미지 URL
+   * @param {string} gifImage - GIF 이미지 URL
+   */
+  function changeImageTemporary(element, staticImage, gifImage) {
+    const img = element.querySelector("img");
+    if (img.src !== gifImage) {
+      img.src = gifImage; // GIF로 변경
+      setTimeout(() => {
+        img.src = staticImage; // 2초 후 정적 이미지로 복원
+      }, 2000);
+    }
+  }
+
+  /**
+   * 모달 열기 함수
+   * @param {string} url - 로드할 HTML 파일 경로
+   */
+  function openModal(url) {
+    const modal = document.getElementById("modal");
+    const modalBody = document.getElementById("modal-body");
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        modalBody.innerHTML = html;
+        modal.style.display = "block";
+      })
+      .catch(err => {
+        console.error("Failed to load modal content:", err);
+      });
+  }
+
+  /**
+   * 모달 닫기 함수
+   */
+  function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
+    const modalBody = document.getElementById("modal-body");
+    modalBody.innerHTML = ""; // 모달 내용 초기화
+  }
+
+  // 모달 외부 클릭 시 닫기
+  window.onclick = function (event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+</script>
